@@ -32,3 +32,24 @@ fsstat()
 -unlink()
 -link()
 -syslink()
+each item ,name,price,qty
+1-add to cart
+2-slow cart
+3-remove from cart
+required files
+crud.js
+product.json
+## item
+id,name,price,qty
+## operations
+add to cart
+show cart
+remove item from cart
+update quantity from cart
+checkout
+note:All items will be stored in hard disk ,so after termination of program we can retrieve cart details.
+##reuired file
+1 crud.js-it contains all the methods and entry point
+2 products.json-it contains the product details in array form
+
+
