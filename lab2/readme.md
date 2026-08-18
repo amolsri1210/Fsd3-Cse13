@@ -12,6 +12,8 @@ major task of fs module
 -directory management
 -mkdir()
 rmdir()
+-rmdir()-depricated
+-rm()
 readdir()
 -metadata/information
 -stat()
