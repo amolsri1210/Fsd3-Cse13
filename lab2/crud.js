@@ -16,7 +16,15 @@ const getCart = async () => {
 
 const addToCart = async (item) => {
   const products = await getCart();
-  products.push(item);
+  const productFound=products.find((p)=>p,id==item.id);
+     if(productFound){
+        productFound.qty+=item.qty;
+        console.log("product in cart quantity updated");
+     }
+     else{
+        products.push(item);
+        console.log("product added successfully");
+     }
   await saveCart(products);
 };
 const showCart =  () => {
@@ -51,10 +59,12 @@ const main = async () => {
        console.log(id,name,price,qty);
        const product ={
         id: Number(id),
+        name,
         price: Number(price),
         qty: Number(qty),
        };
-       console.log(product);
+    //    console.log(product);
+    await addToCart(product)
         break;
       case 2:
         showCart();
@@ -76,5 +86,4 @@ const main = async () => {
 
   cin.close();
 };
-
 main();
